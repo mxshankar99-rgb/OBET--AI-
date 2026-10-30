@@ -4,170 +4,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OBET---AI</title>
-
+<title>OBET---AI Sensitivity</title>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #080b16;
-  color: white;
-}
-
-header {
-  padding: 22px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #22283a;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: bold;
-  color: #7c83ff;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-.hero h1 {
-  font-size: clamp(40px, 8vw, 70px);
-  margin-bottom: 20px;
-}
-
-.hero span {
-  color: #8585ff;
-}
-
-.hero p {
-  color: #aab0c5;
-  font-size: 18px;
-  max-width: 600px;
-  line-height: 1.7;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 15px 30px;
-  background: #696cff;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.features {
-  padding: 60px 8%;
-  text-align: center;
-}
-
-.features h2 {
-  font-size: 35px;
-  margin-bottom: 35px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #12182a;
-  padding: 30px 20px;
-  border: 1px solid #252d47;
-  border-radius: 15px;
-}
-
-.card h3 {
-  color: #9295ff;
-  margin-bottom: 15px;
-}
-
-.card p {
-  color: #aab0c5;
-  line-height: 1.6;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  color: #858ba0;
-  border-top: 1px solid #22283a;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#080b16;color:white;padding:20px}
+header{text-align:center;padding:25px 5px}
+.logo{font-size:34px;font-weight:bold;color:#8585ff}
+header p{color:#aaa;margin-top:8px}
+.card{max-width:500px;margin:20px auto;background:#141a2b;border:1px solid #303958;border-radius:18px;padding:22px}
+h2{color:#9292ff;margin-bottom:18px}
+label{display:block;margin:15px 0 8px;color:#ccc}
+select,input{width:100%;padding:14px;border-radius:10px;border:1px solid #424b68;background:#090e1d;color:white;font-size:16px}
+button{width:100%;padding:15px;margin-top:18px;border:0;border-radius:12px;background:#7068ff;color:white;font-size:17px;font-weight:bold}
+.result{display:none;margin-top:22px}
+.item{display:flex;justify-content:space-between;padding:14px;border-bottom:1px solid #303958}
+.item span:last-child{color:#a3a0ff;font-weight:bold}
+.note{font-size:12px;color:#aaa;line-height:1.5;margin-top:15px}
+footer{text-align:center;color:#777;padding:30px 0}
 </style>
 </head>
-
 <body>
-
 <header>
-  <div class="logo">OBET---AI</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#features">Features</a>
-  </nav>
+<div class="logo">OBET---AI</div>
+<p>Smart Free Fire Sensitivity Generator</p>
 </header>
 
-<section class="hero" id="home">
-  <h1>Welcome to <span>OBET---AI</span></h1>
-  <p>
-    Discover a new world of artificial intelligence.
-    Explore smart ideas, technology and innovation
-    with OBET---AI.
-  </p>
-  <a href="#features" class="btn">Explore Now</a>
-</section>
+<div class="card">
+<h2>📱 Select Your Device</h2>
 
-<section class="features" id="features">
-  <h2>Our Features</h2>
+<label>Phone Brand</label>
+<select id="brand" onchange="updateModels()">
+<option value="">Choose Brand</option>
+<option>Samsung</option>
+<option>Apple iPhone</option>
+<option>Xiaomi</option>
+<option>Redmi</option>
+<option>POCO</option>
+<option>Realme</option>
+<option>OPPO</option>
+<option>Vivo</option>
+<option>OnePlus</option>
+<option>Infinix</option>
+<option>Tecno</option>
+<option>Motorola</option>
+<option>Nothing</option>
+<option>Other</option>
+</select>
 
-  <div class="cards">
-    <div class="card">
-      <h3>🤖 AI Technology</h3>
-      <p>Explore the world of artificial intelligence.</p>
-    </div>
+<label>Phone Model</label>
+<input id="model" list="models" placeholder="Example: Galaxy A16">
+<datalist id="models">
+<option value="Galaxy A16">
+<option value="Galaxy A15">
+<option value="Galaxy A25">
+<option value="Galaxy S24">
+<option value="Galaxy S25">
+<option value="iPhone 13">
+<option value="iPhone 14">
+<option value="iPhone 15">
+<option value="iPhone 16">
+<option value="Redmi Note 13">
+<option value="Redmi Note 14">
+<option value="POCO X6">
+<option value="Realme 12">
+<option value="OPPO A3">
+<option value="Vivo Y28">
+<option value="OnePlus Nord">
+<option value="Infinix Hot 40">
+</datalist>
 
-    <div class="card">
-      <h3>⚡ Fast Experience</h3>
-      <p>A simple and modern website experience.</p>
-    </div>
+<label>Screen / Gaming Preference</label>
+<select id="play">
+<option value="balanced">Balanced</option>
+<option value="smooth">Smooth Aim</option>
+<option value="fast">Fast Drag</option>
+</select>
 
-    <div class="card">
-      <h3>🌐 Innovation</h3>
-      <p>Discover new ideas and digital technology.</p>
-    </div>
-  </div>
-</section>
+<button onclick="generate()">Generate My Sensitivity</button>
 
-<section class="features" id="about">
-  <h2>About OBET---AI</h2>
-  <p>OBET---AI is built for exploring the future of technology.</p>
-</section>
+<div class="result" id="result">
+<h2>🎯 Your Settings</h2>
+<div id="settings"></div>
+<p class="note">These are starting recommendations, not measured device-specific values. Adjust them in training mode according to your gameplay.</p>
+<button onclick="copySettings()">Copy All Settings</button>
+</div>
+</div>
 
-<footer>
-  © 2026 OBET---AI. All Rights Reserved.
-</footer>
+<footer>OBET---AI © 2026<br>Smart Gaming Settings</footer>
 
+<script>
+function updateModels(){
+ document.getElementById('model').value='';
+}
+function generate(){
+ const brand=document.getElementById('brand').value;
+ const model=document.getElementById('model').value.trim();
+ const play=document.getElementById('play').value;
+ if(!brand||!model){
+ alert('Please select your phone brand and model!');
+ return;
+ }
+
+ let dpi=420;
+ let general=180,red=175,x2=170,x4=160,sniper=90,free=140;
+
+ if(brand==='Apple iPhone') dpi=0;
+ if(play==='smooth'){
+ general=170;red=165;x2=160;x4=150;sniper=85;free=130;
+ }
+ if(play==='fast'){
+ general=195;red=190;x2=185;x4=175;sniper=100;free=150;
+ }
+
+ document.getElementById('settings').innerHTML=`
+ <div class="item"><span>Device</span><span>${brand} ${model}</span></div>
+ <div class="item"><span>DPI</span><span>${dpi===0?'Not applicable':dpi+' (starting suggestion)'}</span></div>
+ <div class="item"><span>General</span><span>${general}</span></div>
+ <div class="item"><span>Red Dot</span><span>${red}</span></div>
+ <div class="item"><span>2X Scope</span><span>${x2}</span></div>
+ <div class="item"><span>4X Scope</span><span>${x4}</span></div>
+ <div class="item"><span>Sniper Scope</span><span>${sniper}</span></div>
+ <div class="item"><span>Free Look</span><span>${free}</span></div>`;
+ document.getElementById('result').style.display='block';
+}
+function copySettings(){
+ const text=document.getElementById('settings').innerText;
+ if(navigator.clipboard){
+ navigator.clipboard.writeText(text).then(()=>alert('Settings copied!'));
+ }else{
+ alert('Please select and copy the settings manually.');
+ }
+}
+</script>
 </body>
 </html>
